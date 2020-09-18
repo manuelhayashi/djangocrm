@@ -1,0 +1,30 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Test</title>
+</head>
+<body class="grid-body">
+    <div class="first_row">
+        <section class="grid-col1">Column 1</section>
+        <section class="grid-col2">Column 2</section>
+        <section class="grid-col3">Column 3</section>
+    </div>
+    <div class="row_two">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p>Please enter your name :</p>
+            <label>First</label>
+            <input type="text" name="fname" size="20" maxlength="20">
+            <label>Last</label>
+            <input type="text" name="lname" size="20" maxlength="20">
+            <input type="submit" value="Submit Name">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock content%}

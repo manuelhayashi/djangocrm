@@ -1,0 +1,39 @@
+{% load static %}
+
+<!--this file is made to be called by order_list.html and provides the navigation call and the footer-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manuel Hayashi</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css"/>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+</head>
+
+<body>
+
+
+    <section class="s1">
+        {% include 'base/navbar.html' %}
+
+        {% block content %}
+        <!-- Here goes to /base al main body calls -->
+        {% endblock %}
+
+
+    </section>
+
+    <section class="s2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>2020 Built in Django by Manuel Hayashi</p>
+    </section>
+
+
+
+</body>
+
+</html>

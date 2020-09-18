@@ -1,0 +1,64 @@
+{% extends 'base/main.html' %}
+`
+{% block content %}
+
+<br>
+<div class="row">
+
+    <div class="cc">
+        <div class="cust-info">
+            <p class="title">CUSTOMER INFORMATION</p>
+            <hr>
+            <p>Customer ID: {{ customer.id }}</p>
+
+            <label>Name: {{ customer.name }}</label>
+
+            <hr>
+            <p>email: {{ customer.email }}</p>
+            <p>Phone: {{ customer.phone }}</p>
+        </div>
+    </div>
+
+    <div class="cc">
+        <div class="cust-info">
+            <p class="title">ORDERS</p>
+            <hr>
+            <p>{{ order_count }}</p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="">
+    <div class="row">
+        <div class="cc">
+            <h5>ORDER LIST BY CUSTOMER</h5>
+            <hr>
+            <table class="">
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>date Ordered</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+
+                   {% for order in orders %}
+                        <tr class="table2-rows">
+                            <td class="table-order-row">{{ order.product }}</td>
+                            <td class="table-order-row">{{ order.product.category }}</td>
+                            <td class="table-order-row">{{ order.date_created }}</td>
+                            <td class="table-order-row">{{ order.status }}</td>
+                            <td class="table-order-row"><a href="{% url 'update_order' order.id %}">
+                                <button class="update">Update</button></a></td>
+                            <td class="table-order-row"><a href="{% url 'delete_item' order.id %}">
+                                <button class="delete">Delete</button></a></td>
+                        </tr>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

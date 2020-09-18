@@ -1,0 +1,45 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="cc">
+        <div>
+            <h5 class="">CUSTOMERS</h5>
+            <hr>
+        </div>
+        <div>
+            <h6>Create a new customer ...  <a class="new-button" href="{% url 'create_customer' %}"><button class="new">New</button></a></h6>
+        </div>
+
+        <div class="">
+            <table class="">
+                <tr class="">
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                {% for customer in customers %}
+                    <tr>
+                        <td class="">{{ customer.id }}</td>
+                        <td class="">{{ customer.name }}</td>
+                        <td class="">{{ customer.phone }}</td>
+                        <td class="">{{ customer.email }}</td>
+                        <td class=""><a href="{% url 'update_customer' customer.id %}"><button class="update">Update</button></a></td>
+                        <td class=""><a href="{% url 'customer_orders' customer.id %}"><button class="other">Orders</button></a></td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}
+
+
+

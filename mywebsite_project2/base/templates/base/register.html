@@ -1,0 +1,29 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+
+<h5>Register Page</h5>
+
+
+<form method="POST" class="">
+    {% csrf_token %}
+    <!--{{ form.as_p}}  automatic form from django-->
+
+        {{ form.username.label }}
+        {{ form.username }}
+
+        {{ form.email.label }}
+        {{ form.email }}
+
+        {{ form.password1.label }}
+        {{ form.password1 }}
+
+        {{ form.password2.label }}
+        {{ form.password2 }}
+
+    <button class="new">Submit</button>
+</form>
+
+
+{% endblock content %}

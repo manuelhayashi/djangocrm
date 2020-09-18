@@ -1,0 +1,51 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="cc">
+        <h5 class="">ORDERS</h5>
+        <hr>
+        <p>All orders sorted by "order-date"</p>
+        <p>Orders can be entered new, updated or deleted if cancelled.</p>
+        <hr>
+        <div class="">
+            <div>
+            <h6>Create a new order ...  <a href="{% url 'create_order' %}"><button class="new">New</button></a></h6>
+            </div>
+
+            <table class="">
+                <tr>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Date Ordered</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                {% for order in orders %}
+                    <tr class="">
+                        <td class="">{{ order.product.id }}</td>
+                        <td class="">{{ order.product }}</td>
+                        <td class="">{{ order.date_created }}</td>
+                        <td class="">{{ order.status }}</td>
+                        <td class=""><a href="{% url 'update_order' order.id %}"><button class="update">Update</button></a></td>
+                        <td class=""><a href="{% url 'delete_item' order.id %}"><button class="delete">Delete</button></a></td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<h5>Login Page</h5>
+
+<form method="POST" class="">
+    {% csrf_token %}
+    <input type="text" name="username">
+    <input type="password" name="password">
+
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+     <button type="submit" class="btn btn-success">Login</button>
+
+</form>
+<br>
+Don't have an account? <a href="{% url 'register' %}"><button class="new">Sign up</button></a>
+
+
+
+
+{% endblock content%}

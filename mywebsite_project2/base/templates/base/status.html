@@ -1,0 +1,80 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css"/>
+</head>
+<div class="container">
+    <div class="row">
+        <h3 class="main">Customer Relationship Management (CRM) Application Modeling Sample</h3>
+    </div>
+    <div class="row">
+        <div class="box1">
+            <table>
+                <tr class="">
+                    <th>Orders in process</th>
+                </tr>
+
+                <tr class="data">
+                    <td>{{processing}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box2">
+            <table>
+                <tr class="">
+                    <th>Orders Shipped</th>
+                </tr>
+
+                <tr>
+                    <td class="data">{{shipped}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box3">
+            <table>
+                <tr class="">
+                    <th>Orders Delivered</th>
+                </tr>
+
+                <tr>
+                    <td class="data">{{delivered}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class="box4">
+            <table>
+                <tr class="">
+                    <th>Total Orders</th>
+                </tr>
+
+                <tr>
+                    <td class="data">{{total_orders}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box5">
+            <table>
+                <tr class="">
+                    <th>Orders Returned</th>
+                </tr>
+
+                <tr>
+                    <td class="data">{{returned}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
