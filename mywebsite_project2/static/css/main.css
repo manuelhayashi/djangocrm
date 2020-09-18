@@ -1,0 +1,252 @@
+
+/* font-family: 'Itim', cursive;*/
+/*font-family: 'serif', times;*/
+
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+body {
+    background-color: #e1e5f2
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+     display: flex;
+}
+
+.s1, .s2 {
+    background-color: #e1e5f2;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.main{
+    color: royalblue;
+    text-align: center;
+}
+
+/* Formatting Tables */
+
+th, td {
+    padding: 10px 15px 10px 5px;
+}
+
+th {
+    empty-cells: show;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 100%;
+    border-bottom: 1px solid black;
+    text-align: left;
+ }
+
+tr:hover{
+    background-color: white;
+}
+
+/* Formatting Buttons */
+.other{
+    background-color: #f1a340;
+    color: #f6e8c3;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.new:hover{
+    background-color: #e1e5f2;
+    color: #f1a340;
+    border: 1px solid #f1a340;
+}
+
+.new{
+    background-color: green;
+    color: white;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.new:hover{
+    background-color: #e1e5f2;
+    color: green;
+    border: 1px solid green;
+}
+
+.update{
+    background-color: #00ccff;
+    color: #0066cc;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.update:hover{
+    background-color: #e1e5f2;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.delete:hover{
+    background-color: #e1e5f2;
+    color: red;
+    border: 1px solid red;
+}
+
+/* format navigation bar */
+.nav-bar {
+    font-size: 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+     'top-nav top-nav'
+     'left-nav right-nav';
+     }
+
+.top-nav {
+    color: white;
+    background-color: #2a324b;
+    padding-left: 20px;
+    grid-area: top-nav;
+    }
+
+.left-nav {
+    color: white;
+    grid-area: left-nav;
+    background-color: #2a324b;
+}
+
+.right-nav {
+    grid-area: right-nav;
+    background-color: #2a324b;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-nav #r2 {
+    background: gray;
+    color: white;
+}
+
+#navlines li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#l1, #l2, #l3, #l4 {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#r1, #r2 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* format boxes in status.html */
+
+
+.box1, .box2, .box3, .box4, .box5 {
+    background-color: orange;
+    color: green;
+    margin: 60px 40px 60px 40px;
+}
+
+.data {
+    text-align: center;
+}
+
+/* Formatting Flex Items in Container Row */
+.row {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Formatting Box Items in Column */
+.cc {
+    display: block;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Formatting Customer Orders Cust Info */
+
+.cust-info {
+    background-color: #67a9cf;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+}
+
+/* other formatting testing */
+
+
+.test {
+    padding: 0px;
+    margin:0;
+    color: red;
+    background: green;
+}
+
+.col-cust {margin: 0px;}
+
+.grid-body {
+    background-color: grey;
+}
+
+.first_row {
+    display: flex;
+}
+
+.grid-col1 {
+background-color: green;
+}
+
+.grid-col2 {
+background-color: white;
+}
+
+.grid-col3 {
+background-color: red;
+}
+
+.row_two {
+    background-color: blue;
+    color: white;
+    margin: 0;
+}
