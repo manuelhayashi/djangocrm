@@ -26,9 +26,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 't5!ty5_(*16u6$*xlmu#44c2_!wwa)+a1=1c$gfv(od6ndq8=g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['emountain.herokuapp.com/', '127.0.0.1']
+
 
 
 # Application definition
